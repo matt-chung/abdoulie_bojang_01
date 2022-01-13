@@ -7,6 +7,7 @@ Assemble and profile Staphylococcus aureus samples from clinical samples
 	- [Set working directory](#set-working-directory)
 	- [Trim primer sequences from reads using Trimmomatic](#trim-primer-sequences-from-reads-using-trimmomatic)
 	- [Combine single end reads into the same FASTQ](#combine-single-end-reads-into-the-same-fastq)
+- [Assemble Staphylococcus genomes](#assemble-staphylococcus-genomes)
 	- [Assemble reads for each sample using SPAdes](#assemble-reads-for-each-sample-using-spades)
 	- [Subset assemblies to keep only contigs >5k bp](#subset-assemblies-to-keep-only-contigs-5k-bp)
 	- [Run a BLASTn search on contigs to identify specifically Staphylococcus contigs](#run-a-blastn-search-on-contigs-to-identify-specifically-staphylococcus-contigs)
@@ -64,6 +65,8 @@ do
 cat "$SAMPLE".1.se.trimmed.fastq.gz "$SAMPLE".2.se.trimmed.fastq.gz > "$SAMPLE".se.trimmed.fastq.gz
 done
 ```
+
+# Assemble Staphylococcus genomes
 
 ## Assemble reads for each sample using SPAdes
 
